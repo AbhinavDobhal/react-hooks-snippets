@@ -1,1 +1,214 @@
-{}
+{
+	"ReactFunctionalComponent": {
+		"prefix": "rfc",
+		"body": [
+		  "import React from 'react';",
+		  "",
+		  "const ${TM_FILENAME_BASE} = () => {",
+		  "",
+		  "    return (",
+		  "        <div>",
+		  "        </div>",
+		  "    );",
+		  "};",
+		  "",
+		"export default $TM_FILENAME_BASE;"
+		],
+		"description": "Basic Component"
+	  },
+	"ReactHooksUseState": {
+		"prefix": "rhus",
+		"body": [
+		  "import React, { useState } from 'react';",
+		  "",
+		  "const ${TM_FILENAME_BASE} = () => {",
+		  "    const [state, setState] = useState();",
+		  "",
+		  "    return (",
+		  "        <div>",
+		  "        </div>",
+		  "    );",
+		  "};",
+		  "",
+		"export default $TM_FILENAME_BASE;"
+		],
+		"description": "Basic Component with useState"
+	  },
+	  "ReactHooksUseReducer": {
+		"prefix": "rhur",
+		"body": [
+		  "import React, { useReducer } from 'react';",
+		  "",
+		  "const ${TM_FILENAME_BASE} = () => {",
+		  "    const [state, dispatch] = useReducer();",
+		  "",
+		  "    return (",
+		  "        <div>",
+		  "        </div>",
+		  "    );",
+		  "};",
+		  "",
+		"export default $TM_FILENAME_BASE;"
+		],
+		"description": "Basic Component with useReducer"
+	  },
+	  "ReactHooksUseContext": {
+		"prefix": "rhuc",
+		"body": [
+		  "import React, { useContext } from 'react';",
+		  "",
+		  "const ${TM_FILENAME_BASE} = () => {",
+		  "    const context = useContext();",
+		  "",
+		  "    return (",
+		  "        <div>",
+		  "        </div>",
+		  "    );",
+		  "};",
+		  "",
+		"export default $TM_FILENAME_BASE;"
+		],
+		"description": "Basic Component with useContext"
+	  },
+	  "UseStateUseEffect": {
+		"prefix": "rhusue",
+		"body": [
+		  "import React, { useState, useEffect } from 'react';",
+		  "",
+		  "const ${TM_FILENAME_BASE} = () => {",
+		  "    const [state, setState] = useState();",
+		  "",
+		  "    useEffect(() => {",
+		  "",
+		  "    }, [])",
+		  "",
+		  "    return (",
+		  "        <div>",
+		  "        </div>",
+		  "    );",
+		  "};",
+		  "",
+		  "export default ${TM_FILENAME_BASE};"
+		],
+		"description": "Basic Component with useEffect and useState"
+	  },
+	  "UseReducerUseEffect": {
+		"prefix": "rhurue",
+		"body": [
+		  "import React, { useReducer, useEffect } from 'react';",
+		  "",
+		  "const ${TM_FILENAME_BASE} = () => {",
+		  "    const [state, dispatch] = useReducer();",
+		  "",
+		  "    useEffect(() => {",
+		  "",
+		  "    }, [])",
+		  "",
+		  "    return (",
+		  "        <div>",
+		  "        </div>",
+		  "    );",
+		  "};",
+		  "",
+		  "export default ${TM_FILENAME_BASE};"
+		],
+		"description": "Basic Component with useEffect and useReducer"
+	  },
+	  "UseContextUseEffect": {
+		"prefix": "rhucue",
+		"body": [
+		  "import React, { useContext, useEffect } from 'react';",
+		  "",
+		  "const ${TM_FILENAME_BASE} = () => {",
+		  "    const context = useContext();",
+		  "",
+		  "    useEffect(() => {",
+		  "",
+		  "    }, [])",
+		  "",
+		  "    return (",
+		  "        <div>",
+		  "        </div>",
+		  "    );",
+		  "};",
+		  "",
+		  "export default ${TM_FILENAME_BASE};"
+		],
+		"description": "Basic Component with useEffect and useContext"
+	  },
+	  "Inline useState": {
+		"prefix": "usln",
+		"body": [
+		  "",
+		  "const [state, useState] = useState();",
+		  ""
+		],
+		"description": "initialize useState"
+	  },
+	  "Inline useEffect": {
+		"prefix": "ueln",
+		"body": [
+		  "useEffect(() => {",
+		  "",
+		  "}, [])",
+		],
+		"description": "initialize useEffect"
+	  },
+	  "UseReducerAdvanced": {
+		"prefix": "rhuradv",
+		"body": [
+		  "import React, { useReducer, useEffect } from 'react';",
+		  "",
+		  "const ACTION_TYPE = \"ACTION\"",
+		  "",
+		  "const ACTION = {",
+		  "  type: ACTION_TYPE",
+		  "}",
+		  "",
+		  "const action_creator = () => {",
+		  "  return ACTION",
+		  "}",
+		  "",
+		  "export const initialState = {",
+		  "  prop1: false",
+		  "}",
+		  "",
+		  "export const reducer = (state = initialState, action) => {",
+		  "    switch(action.type) {",
+		  "      case ACTION_TYPE:",
+		  "        return {",
+		  "          ...state,",
+		  "          prop1: true,",
+		  "        }",
+		  "      default:",
+		  "        return state",
+		  "    }",
+		  "}",
+		  "",
+		  "const ${TM_FILENAME_BASE} = () => {",
+		  "    const [state, dispatch] = useReducer(reducer, initialState);",
+		  "",
+		  "    useEffect(() => {",
+		  "",
+		  "    }, [])",
+		  "",
+		  "    const handleDispatch = () => {",
+		  "     // dispatch(type: \"ACTION\")",
+		  "     // dispatch(type: ACTION_TYPE)",
+		  "     // dispatch(ACTION)",
+		  "     // dispatch(action_creator())",
+		  "    }",
+		  "",
+		  "    return (",
+		  "        <div>",
+		  "          {state.prop1}", 
+		  "        </div>",
+		  "    );",
+		  "};",
+		  "",
+		  "export default ${TM_FILENAME_BASE};"
+		],
+		"description": "useReducer with actions and reducer"
+	  }
+
+}

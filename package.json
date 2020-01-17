@@ -2,7 +2,7 @@
     "name": "react-hooks-snippets",
     "displayName": "react-hooks-snippets",
     "description": "React Hooks Snippets is a Visual Studio Code extension to make writing ReactJS Hooks easier and faster!",
-    "version": "0.0.1",
+    "version": "1.0.0",
     "engines": {
         "vscode": "^1.41.0"
     },
