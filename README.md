@@ -3,9 +3,6 @@ Extension for React hooks snippets
 
 ## Usage
 
-Type part of a snippet, press `enter`, and the snippet unfolds. Camel Cased identifiers allows for abbreviations.
-For example: `cdm` will match `compDidMount`.
-
 |      Shortcut Identifier |     | Description                                        |
 | -----------------------: | --- | :------------------------------------------------- |
 |                  **rfc** | →   | React Functional Component                         |
