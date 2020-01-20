@@ -9,10 +9,15 @@
     "categories": [
         "Snippets"
     ],
+    "publisher": "AbhinavDobhal",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/AbhinavDobhal/react-hooks-snippets.git"
+        },
     "contributes": {
         "snippets": [
             {
-                "language": "javascript",
+                "language": "javascriptreact",
                 "path": "./snippets/snippets.json"
             }
         ]
